@@ -144,7 +144,7 @@ export class CLContainer extends React.Component<CLContainerProps> {
     if (!hasScroller && !hasAppBar && !hasBottomBar) {
       return <View style={[styles.fill, this.props.style]} />;
     }
-
+    console.log("footerStyle", this.props.footerStyle);
     return (
       <View style={[{ flex: 1, paddingBottom, paddingTop }, this.props.style]}>
         {this.props.renderScrollComponent
