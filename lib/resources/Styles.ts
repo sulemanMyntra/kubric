@@ -10,8 +10,7 @@ export const styles = StyleSheet.create({
     overflow: "hidden",
   },
   footer: {
-    // @ts-ignore
-    position: "fixed",
+    position: "absolute",
     bottom: 0,
     left: 0,
     right: 0,

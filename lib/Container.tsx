@@ -53,6 +53,7 @@ export interface CLContainerProps extends ViewProperties {
   onLayout?: (event: LayoutChangeEvent) => void;
   showSeparator?: boolean;
   footerStyle?: ViewStyle;
+  headerStyle?: ViewStyle;
 }
 
 export interface CLBehaviourModel {
@@ -180,7 +181,7 @@ export class CLContainer extends React.Component<CLContainerProps> {
             })
           ) : (
             <CLAppBar
-              style={styles.header}
+              style={[styles.header, this.props.headerStyle]}
               safeAreaInsets={{ ...safeAreaInsets, bottom: 0 }}
               scrollBehaviourOffset={scrollBehvavioutOffsetInterpolation}
               scrollBehaviours={this.props.appBarScrollBehaviours}
